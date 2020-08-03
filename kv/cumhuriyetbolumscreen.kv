@@ -1,0 +1,140 @@
+#:import utils kivy.utils
+<CumhuriyetbolumScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#39a8a1")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            rows:1
+            cols:5
+            pos_hint: {"top":1, "left": 1}
+            size_hint: 1 ,.1
+            ImageButton:
+                source:"Webp.net-resizeimage.png"
+                on_release:
+                    app.change_screen("donemsair_screen")
+                    root.manager.transition.direction = 'right'
+            Label:
+                text: ""
+            Label:
+                text: ""
+            Label:
+                text: ""
+            Label:
+                text: ""
+        GridLayout:
+            rows:13
+            pos_hint: {"top":.9, "left": .95,"right":.95}
+            size_hint: .9 ,.8
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Cumhuriyet Donemi Tamami"
+                id: tum_cumhuriyet
+                on_release:
+                    app.TumCH()
+                    app.change_screen("uyaksec_screen")
+            Button:
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                text: "Cumhuriyet Donemi Saf Siir Anlayisi"
+                id: ch_saf
+                on_release:
+                    app.CHSafSiir()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Yedi Mesaleciler"
+                id: yedi_mesaleciler
+                on_release:
+                    app.YediMesaleciler()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                text: "Cumhuriyet Donemi Toplumcu Siir Anlayisi"
+                id : ch_toplumcu
+                on_release:
+                    app.CHToplumcu()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Maviciler"
+                id: maviciler
+                on_release:
+                    app.Maviciler()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                text: "Cumhuriyet Donemi Milli Edebiyat Anlayisi"
+                id: ch_milli
+                on_release:
+                    app.CHMilli()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Garip Akimi(II. Yeni)"
+                id: garip
+                on_release:
+                    app.Garip()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                text: "Ikinci Yeni Akimi"
+                id : ikinci_yeni
+                on_release:
+                    app.IkinciYeni()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Din Gelenek ve Metafizik Ogelerine Bagli Anlayis"
+                id : din_gm
+                on_release:
+                    app.DinGM()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                text: "Hisarcilar"
+                id: Hisarcilar
+                on_release:
+                    app.Hisarcilar()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "60 Sonrasi Toplumcu Siir"
+                id: altmis_s
+                on_release:
+                    app.AltmisS()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                text: "80 Sonrasi Turk Siiri"
+                id: seksen_s
+                on_release:
+                    app.SeksenS()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Cumhuriyet Doneminde Halk Siiri"
+                id : ch_halk
+                on_release:
+                    app.CHHalk()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+
+
+        GridLayout:
+            rows:1
+            pos_hint: {"top":.1, "left": 1}
+            size_hint: 1 ,.1

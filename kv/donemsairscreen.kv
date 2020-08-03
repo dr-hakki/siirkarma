@@ -1,0 +1,62 @@
+#:import utils kivy.utils
+<DonemsairScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#5c9bc4")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            rows:1
+            cols:5
+            pos_hint: {"top":1, "left": 1}
+            size_hint: 1 ,.1
+            ImageButton:
+                source:"Webp.net-resizeimage.png"
+                on_release:
+                    app.change_screen("home_screen")
+                    root.manager.transition.direction = 'right'
+            Label:
+                text:""
+            Label:
+                text:""
+            Label:
+                text:""
+            Label:
+                text:""
+        GridLayout:
+            rows:1
+            cols:3
+            pos_hint: {"top":.9, "left": 1}
+            size_hint: 1 ,.3
+            Button:
+                text: "Donem Secip Kar"
+                id: donem_kar
+                font_size: '23sp'
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                on_release:
+                    app.change_screen("donem_screen")
+                    root.manager.transition.direction = 'left'
+        GridLayout:
+            rows:1
+            pos_hint: {"top":6, "left": 1}
+            size_hint: 1 ,.2
+        GridLayout:
+            rows:1
+            cols:3
+            pos_hint: {"top":.4, "left": 1}
+            size_hint: 1 ,.3
+            Button:
+                text: "şair seçip kar"
+                id: sair_kar
+                font_size: '23sp'
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                on_release:
+                    app.change_screen("sairler_screen")
+                    root.manager.transition.direction = 'left'
+
+        GridLayout:
+            rows:1
+            pos_hint: {"top":.1, "left": 1}
+            size_hint: 1 ,.1

@@ -1,0 +1,39 @@
+#:import utils kivy.utils
+<AciklamaScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#a6e80c")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            rows:1
+            cols:5
+            pos_hint: {"top":1, "left": 1}
+            size_hint: 1 ,.1
+            ImageButton:
+                source:"Webp.net-resizeimage.png"
+                on_release:
+                    app.change_screen("home_screen")
+                    root.manager.transition.direction = 'right'
+            Label:
+                text:""
+            Label:
+                text:""
+            Label:
+                text:""
+            Label:
+                text:""
+
+        GridLayout:
+            rows:1
+            pos_hint: {"top":.9, "left": .95, "right":.95}
+            size_hint: .9 ,.8
+            Label:
+                text:"a"
+                id: aciklama_label
+                text_size: self.width, None
+                size_hint: 1, 1
+                height: self.texture_size[1]
+                font_size: "17sp"

@@ -1,0 +1,39 @@
+#:import utils kivy.utils
+<SairlerScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#5c9bc4")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            rows:1
+            cols:5
+            pos_hint: {"top":1, "left": 1}
+            size_hint: 1 ,.1
+            ImageButton:
+                source:"Webp.net-resizeimage.png"
+                on_release:
+                    app.change_screen("home_screen")
+                    root.manager.transition.direction = 'right'
+            Label:
+                text:""
+            Label:
+                text:""
+            Label:
+                text:""
+            Label:
+                text:""
+
+        ScrollView:
+            pos_hint: {"top":.9,"left":1}
+            size_hint: 1,.85
+            GridLayout:
+                cols:1
+                id: sair_grid
+                spacing: 0,0
+                size_hint_y: None
+                height: self.minimum_height
+                row_default_height: '100'
+                row_force_default: True

@@ -1,0 +1,90 @@
+#:import utils kivy.utils
+<OutputScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#72697d")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            rows:1
+            cols:5
+            pos_hint: {"top":1, "left": 1}
+            size_hint: 1 ,.1
+            ImageButton:
+                pos_hint: {"top":1, "left": 1}
+                source:"Webp.net-resizeimage.png"
+                on_release:
+                    app.kaydedildi()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'right'
+            Label:
+                text: ""
+            Label:
+                text: ""
+            Label:
+                text: ""
+            Label:
+                text: ""
+        GridLayout:
+            rows:4
+            pos_hint: {"top":.9, "left": .95,"right":.95}
+            size_hint: .9 ,.7
+            row_default_height:"50sp"
+            Label:
+                text:"a"
+                id: label_1
+                text_size: self.width, None
+                size_hint: 1, 1
+                height: self.texture_size[1]
+                font_size: "22sp"
+            Label:
+                text:"s"
+                id: label_2
+                text_size: self.width, None
+                size_hint: 1, 1
+                height: self.texture_size[1]
+                font_size: "22sp"
+            Label:
+                text:"d"
+                id: label_3
+                text_size: self.width, None
+                size_hint: 1, 1
+                height: self.texture_size[1]
+                font_size: "22sp"
+            Label:
+                text:"f"
+                id: label_4
+                text_size: self.width, None
+                size_hint: 1, 1
+                height: self.texture_size[1]
+                font_size: "22sp"
+
+        GridLayout:
+            rows: 1
+            cols: 2
+            pos_hint: {"top":.2, "left": .9,"right":.9}
+            size_hint: .8 ,.1
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Kar"
+                id: kar
+                on_release:
+                    app.tekrar()
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Dize Bilgileri"
+                id: bilgis
+                on_release:
+                    app.bilgiler()
+        GridLayout:
+            rows: 1
+            pos_hint: {"top":.1, "left": .9,"right":.9}
+            size_hint: .8 ,.1
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Kaydet"
+                id: kaydedildi
+                on_release:
+                    app.kaydet()

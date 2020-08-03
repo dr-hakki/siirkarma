@@ -1,0 +1,102 @@
+#:import utils kivy.utils
+<DonemScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#39a8a1")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            rows:1
+            cols:5
+            pos_hint: {"top":1, "left": 1}
+            size_hint: 1 ,.1
+            ImageButton:
+                source:"Webp.net-resizeimage.png"
+                on_release:
+                    app.change_screen("home_screen")
+                    root.manager.transition.direction = 'right'
+            Label:
+                text: ""
+            Label:
+                text: ""
+            Label:
+                text: ""
+            Label:
+                text: ""
+        GridLayout:
+            rows:8
+            pos_hint: {"top":.9, "left": .95,"right":.95}
+            size_hint: .9 ,.8
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Asik Halk Siiri"
+                id: asik_halk
+                on_release:
+                    app.AsikHalk()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                text: "Dini Halk Siiri"
+                color: 0,0,0,1
+                id: dini_halk
+                on_release:
+                    app.DiniHalk()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Divan Siiri"
+                id: divan
+                on_release:
+                    app.Divan()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                text: "Tanzimat Siiri"
+                color: 0,0,0,1
+                id: tanzimat
+                on_release:
+                    app.Tanzimat()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Servetifunun Siiri"
+                id: servetifunun
+                on_release:
+                    app.ServetiFunun()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                text: "Fecriati Siiri"
+                color: 0,0,0,1
+                id: fecriati
+                on_release:
+                    app.FecriAti()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Milli Edebiyat Siiri"
+                id: milligiris
+                on_release:
+                    app.change_screen("millibolum_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                id: cumhuriyetgiris
+                text: "Cumhuriyet Siiri"
+                color: 0,0,0,1
+                on_release:
+                    app.change_screen("cumhuriyetbolum_screen")
+                    root.manager.transition.direction = 'left'
+
+        GridLayout:
+            rows:1
+            pos_hint: {"top":.1, "left": 1}
+            size_hint: 1 ,.1

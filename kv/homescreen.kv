@@ -1,0 +1,79 @@
+#:import utils kivy.utils
+<HomeScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#c9ede7")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            rows:1
+            cols:5
+            pos_hint: {"top":1, "left": 1}
+            size_hint: 1,.3
+            Label:
+                text: ""
+            Label:
+                text: ""
+            Label:
+                text: '[b]make label bold[/b]'
+                bold: True
+                color: (0, 0, 0, 1.0)
+                id: baslik
+                font_size: "31sp"
+            Label:
+                text: ""
+            Label:
+            	text: ""
+        GridLayout:
+            rows:1
+            pos_hint: {"top":.75, "left": 1}
+            size_hint: 1 ,.45
+            ImageButton:
+                source: "poem (1).png"
+                on_release:
+                    app.change_screen("donemsair_screen")
+                    root.manager.transition.direction = 'left'
+        GridLayout:
+            rows:1
+            pos_hint: {"top":.42, "left": .9}
+            size_hint: .9 ,.1
+            Label:
+                text: "Olustur"
+                id:anamenu
+                bold: True
+                font_size:"22sp"
+                color: (0, 0, 0, 1.0)
+
+        GridLayout:
+            rows:1
+            cols:2
+            pos_hint: {"top":.25, "left": 0.8}
+            size_hint: 0.8 ,.23
+            ImageButton:
+                source:"list.png"
+                on_release:
+                    app.change_screen("save_screen")
+                    root.manager.transition.direction = 'left'
+            Label:
+                text: ""
+        GridLayout:
+            cols:3
+            pos_hint: {"top":.1,"left":.6}
+            size_hint: 1 ,.08
+            Label:
+                text: "Siirlerim"
+                bold: True
+                font_size:"18sp"
+                color: (0, 0, 0, 1.0)
+                id: siirlerim
+            Label:
+                text: ""
+            ImageButton:
+                source: "icons8-question-mark-96.v2.png"
+                on_release:
+                    app.change_screen("aciklama_screen")
+                    root.manager.transition.direction = 'left'
+                
+

@@ -1,0 +1,110 @@
+#:import utils kivy.utils
+<UyaksecScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#635c96")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            rows:1
+            cols:5
+            pos_hint: {"top":1, "left": 1}
+            size_hint: 1 ,.1
+            ImageButton:
+                pos_hint: {"top":1, "left": 1}
+                source:"Webp.net-resizeimage.png"
+                on_release:
+                    app.change_screen("donemsair_screen")
+                    root.manager.transition.direction = 'right'
+            Label:
+                text: ""
+            Label:
+                text: ""
+            Label:
+                text: ""
+            Label:
+                text: ""
+        GridLayout:
+            rows:1
+            pos_hint: {"top":.9, "left": .9,"right":.9}
+            size_hint: .8 ,.2
+            Label:
+                text: "Aciklama"
+                id: divanin_farki
+                text_size: self.width, None
+                size_hint: 1, 1
+                height: self.texture_size[1]
+                font_size: "16sp"
+        GridLayout:
+            rows:1
+            pos_hint: {"top":.7, "left": .7}
+            size_hint: 1 ,.05
+            Label:
+                text: ""
+                id: harf_sayi
+        GridLayout:
+            cols:2
+            pos_hint: {"top":.65, "left": 1}
+            size_hint: 1 ,.1
+            Button:
+                background_color: (0.51, 1.46, 1.58, 1.0)
+                text: "Son 2 Harf"
+                font_size: "18sp"
+                id: harf_iki
+                on_release:
+                    app.harfiki()
+            Button:
+                background_color: (0.51, 1.46, 1.58, 1.0)
+                text: "Son 3 Harf"
+                font_size: "18sp"
+                id: harf_uc
+                on_release:
+                    app.harfuc()
+        GridLayout:
+            # UYAK SEÇME YERİ
+            rows:4
+            pos_hint: {"top":.55, "left": 1}
+            size_hint: 1 ,.5
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Duz Uyak (a,a,a,b)"
+                font_size: "17sp"
+                id: duz_uyak1
+                on_release:
+                    app.duzuyak1()
+                    app.change_screen("output_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Duz Uyak(a,a,b,b)"
+                font_size: "17sp"
+                id: duz_uyak
+                on_release:
+                    app.duzuyak()
+                    app.change_screen("output_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Capraz Uyak"
+                font_size: "17sp"
+                id: capraz_uyak
+                on_release:
+                    app.caprazuyak()
+                    app.change_screen("output_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Sarma Uyak"
+                font_size: "17sp"
+                id: sarma_uyak
+                on_release:
+                    app.sarmauyak()
+                    app.change_screen("output_screen")
+                    root.manager.transition.direction = 'left'
+
+        GridLayout:
+            rows:1
+            pos_hint: {"top":.05, "left": 1}
+            size_hint: 1 ,.05

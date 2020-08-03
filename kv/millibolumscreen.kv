@@ -1,0 +1,50 @@
+#:import utils kivy.utils
+<MillibolumScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#39a8a1")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            rows:1
+            cols:5
+            pos_hint: {"top":1, "left": 1}
+            size_hint: 1 ,.1
+            ImageButton:
+                source:"Webp.net-resizeimage.png"
+                on_release:
+                    app.change_screen("donemsair_screen")
+                    root.manager.transition.direction = 'right'
+            Label:
+                text: ""
+            Label:
+                text: ""
+            Label:
+                text: ""
+            Label:
+                text: ""
+        GridLayout:
+            rows:8
+            pos_hint: {"top":.9, "left": .95,"right":.95}
+            size_hint: .9 ,.8
+            Button:
+                background_color: (0.0, 1.0, 1.0, 1.0)
+                text: "Milli Edebiyat Siiri"
+                on_release:
+                    app.Milli()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+            Button:
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                text: "Bes Hececiler"
+                on_release:
+                    app.BesHececiler()
+                    app.change_screen("uyaksec_screen")
+                    root.manager.transition.direction = 'left'
+
+        GridLayout:
+            rows:1
+            pos_hint: {"top":.1, "left": 1}
+            size_hint: 1 ,.1

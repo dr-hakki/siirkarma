@@ -1,0 +1,48 @@
+#:import utils kivy.utils
+<SaveScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("#08b6d1")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            rows:1
+            cols:5
+            pos_hint: {"top":1, "left": 1}
+            size_hint: 1 ,.1
+            ImageButton:
+                source:"Webp.net-resizeimage.png"
+                on_release:
+                    app.change_screen("home_screen")
+                    root.manager.transition.direction = 'right'
+            Label:
+                text:""
+            Label:
+                text:""
+            Label:
+                text:""
+            Label:
+                text:""
+        ScrollView:
+            pos_hint: {"top":.9,"left":1}
+            size_hint: 1,.8
+            GridLayout:
+                id: siir_grid
+                cols: 1
+                spacing: 0,0
+                size_hint_y: None
+                height: self.minimum_height
+                row_default_height: '100'
+                row_force_default: True
+        GridLayout:
+            rows:1
+            pos_hint:{"top":.1,"right":.9,"left":.9}
+            size_hint: .8,.1
+            Button:
+                background_color: (2.55, 1.53, 1.02, 1.0)
+                text:"Tümünü Sil"
+                id: sil
+                on_release:
+                    app.silme()
