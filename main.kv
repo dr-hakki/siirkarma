@@ -1,0 +1,49 @@
+#:include kv/homescreen.kv
+#:include kv/savescreen.kv
+#:include kv/donemsairscreen.kv
+#:include kv/aciklamascreen.kv
+#:include kv/donemscreen.kv
+#:include kv/uyaksecscreen.kv
+#:include kv/outputscreen.kv
+#:include kv/millibolumscreen.kv
+#:include kv/cumhuriyetbolumscreen.kv
+#:include kv/sairlerscreen.kv
+
+
+
+GridLayout:
+    cols:1
+    ScreenManager:
+        id: screen_manager
+        HomeScreen:
+            name: "home_screen"
+            id: home_screen
+        SaveScreen:
+            name: "save_screen"
+            id: save_screen
+        DonemsairScreen:
+            name: "donemsair_screen"
+            id: donemsair_screen
+        AciklamaScreen:
+            name: "aciklama_screen"
+            id: aciklama_screen
+        DonemScreen:
+            name: "donem_screen"
+            id: donem_screen
+        UyaksecScreen:
+            name: "uyaksec_screen"
+            id: uyaksec_screen
+        OutputScreen:
+            name: "output_screen"
+            id: output_screen
+        MillibolumScreen:
+            name: "millibolum_screen"
+            id: millibolum_screen
+        CumhuriyetbolumScreen:
+            name: "cumhuriyetbolum_screen"
+            id : cumhuriyetbolum_screen
+        SairlerScreen:
+            name: "sairler_screen"
+            id: sairler_screen
+
+

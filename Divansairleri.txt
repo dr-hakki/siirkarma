@@ -1,0 +1,27 @@
+Ahmedi.txt
+Ahmet Pasa.txt
+Ali Sir Nevai.txt
+Azmizade Haleti.txt
+Asik Pasa.txt
+Baki.txt
+Bagdatli Ruhi.txt
+Fuzuli.txt
+Gulsehri.txt
+Hayali.txt
+Hoca Ahmed Fakih.txt
+Kadi Burhaneddin.txt
+Mevlana Celaleddin Rumi.txt
+Na'ili.txt
+Necati Bey.txt
+Nedim.txt
+Nef'i.txt
+Nesati.txt
+Nabi.txt
+Seyyid Nesimi.txt
+Sultan Veled.txt
+Suleyman Celebi.txt
+Sunbulzade Vehbi Efendi.txt
+Taslicali Yahya Bey.txt
+Sair Seyhi.txt
+Seyh Galib.txt
+Seyyad Hamza.txt

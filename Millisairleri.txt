@@ -1,0 +1,5 @@
+Mehmet Akif Ersoy.txt
+Mehmet Emin Yurdakul.txt
+Riza Tevfik Bolukbasi.txt
+yahya-kemal-beyatli.txt
+Ziya Gokalp.txt
